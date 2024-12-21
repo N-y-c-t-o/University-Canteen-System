@@ -1,0 +1,145 @@
+body {
+    background-color: #f4f4f4; /* Set background color */
+    color: #333; /* Set default text color */
+}
+
+.sidebar {
+    background-color: #ff6f61; /* Sidebar background */
+    height: 100vh;
+    padding: 20px;
+}
+
+.sidebar .logo img {
+    width: 100px;
+    margin-bottom: 20px;
+}
+
+.sidebar nav ul {
+    padding-left: 0;
+}
+
+.sidebar nav ul li {
+    margin: 20px 0;
+}
+
+.sidebar nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.sidebar nav ul li a.active {
+    font-weight: bold;
+}
+
+.upgrade {
+    margin-top: 20px;
+}
+
+.upgrade .btn {
+    background-color: #ff6f61;
+    border: none;
+}
+
+.main-content {
+    padding: 20px;
+}
+
+.header h1 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.search-bar input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.promotions {
+    margin-top: 20px;
+}
+
+.promotion-card {
+    background-color: #fff;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.promo-text h2 {
+    font-size: 22px;
+    font-weight: bold;
+    color: #ff6f61;
+}
+
+.promo-text p {
+    font-size: 16px;
+    color: #555;
+}
+
+.promo-image img {
+    width: 150px;
+}
+
+.recommended {
+    margin-top: 20px;
+}
+
+.recommended h2 {
+    font-weight: bold;
+    color: #fbbc5e;
+}
+
+.recommended-items {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.item-card {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex-basis: 30%;
+}
+
+.item-card h3 {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #ff6f61;
+}
+
+.item-card p {
+    color: #333;
+    font-weight: bold;
+}
+
+.order-summary {
+    margin-top: 20px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.order-summary h2 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+}
+
+.order-details p {
+    margin: 5px 0;
+    color: #555;
+}
+
+.order-summary .btn {
+    background-color: #ff6f61;
+    border: none;
+    margin-top: 10px;
+}

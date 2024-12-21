@@ -1,0 +1,588 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    overflow-x:hidden;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.d-grid {
+    display: grid;
+}
+
+.d-flex {
+    display: flex;
+    display: -webkit-flex;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+button,
+input,
+select {
+    -webkit-appearance: none;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+button,
+.btn,
+select {
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto; /* Maintain aspect ratio */
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-20px); /* Bounce up */
+    }
+    60% {
+        transform: translateY(-15px); /* Bounce down */
+    }
+}
+
+.left_grid_info {
+    position: relative; /* Create a positioning context for the child elements */
+    width: 100%; /* Adjust based on your design */
+    height: 60%; /* Adjust based on the content */
+}
+
+.left_grid_info .background {
+    position: absolute; /* Background image */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index: 1; /* Background image is behind */
+}
+
+.left_grid_info .foreground {
+    position: absolute; /* Foreground image with bounce effect */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index: 2; /* Foreground image is on top */
+    animation: bounce 3s infinite; /* Apply bounce effect */
+}
+
+.left_grid_info2 {
+    position: relative;
+    width: 100%; /* Adjust as needed */
+    height: 100%; /* Adjust as needed */
+    margin: auto; /* Center the container if needed */
+}
+
+/* Glass Image Styling */
+.left_grid_info2 .glass {
+
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%; /* Adjust as needed */
+    z-index: 1; /* Behind the Pepsi image */
+}
+
+/* Pepsi Image Styling with Bounce Effect */
+.left_grid_info2 .pepsi {
+    max-width: 50% !important; /* Force this rule to apply */
+    height: auto !important;
+    position: absolute;
+    top: -100;
+    left: 5%; /* Adjust to move Pepsi image to the desired side */
+    transform: translateX(-50%);
+    width: 50%; /* Adjust to make the Pepsi image smaller or larger */
+    z-index: 2; /* On top of the Glass image */
+    animation: bounce 3s infinite;
+}
+
+/* .left_grid_info img {
+    max-width: 100%;
+    display: block; /* Ensures that images do not have extra space around them 
+} */
+
+ul {
+    margin: 0;
+    padding: 0
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+    padding: 0
+}
+
+p {
+    color: #333;
+    font-size: 16px;
+    line-height: 25px;
+    opacity: .6;
+}
+
+.p-relative {
+    position: relative;
+}
+
+.p-absolute {
+    position: absolute;
+}
+
+.p-fixed {
+    position: fixed;
+}
+
+.p-sticky {
+    position: sticky;
+}
+
+.btn,
+button,
+.actionbg,
+input {
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -o-border-radius: 4px;
+    -ms-border-radius: 4px;
+}
+
+.btn:hover,
+button:hover {
+    transition: 0.5s ease;
+    -webkit-transition: 0.5s ease;
+    -o-transition: 0.5s ease;
+    -ms-transition: 0.5s ease;
+    -moz-transition: 0.5s ease;
+}
+
+/*-- wrapper start --*/
+.wrapper {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (min-width: 576px) {
+    .wrapper {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 768px) {
+    .wrapper {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 992px) {
+    .wrapper {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .wrapper {
+        max-width: 1140px;
+    }
+}
+
+.wrapper-full {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/*-- //wrapper start --*/
+
+/*-- form styling --*/
+.w3l-mockup-form {
+    position: relative;
+    min-height: 100vh;
+    z-index: 0;
+    background: linear-gradient(135deg, #fff5ec, #f8e4d8); /* Gradient from #fff5ec to a slightly darker shade #f8e4d8 */
+    /* background: rgba(24, 205, 45, 0.1); */
+    padding: 40px 40px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.triangle-container {
+    position: absolute;
+    width: 20%;
+    height: 80%;
+    z-index: 1; /* Ensure triangles are behind the form content */
+}
+
+.triangle {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+}
+
+.triangle-1 {
+    border-width: 100px 50px 0 50px;
+    border-color: rgba(0, 0, 0, 0.1) transparent transparent transparent;
+    top: 10%;
+    left: 20%;
+    transform: rotate(45deg);
+}
+
+.triangle-2 {
+    border-width: 75px 37.5px 0 37.5px;
+    border-color: rgba(0, 0, 0, 0.1) transparent transparent transparent;
+    top: 35%;
+    left: 7%;
+    transform: rotate(10deg);
+}
+
+.triangle-3 {
+    border-width: 125px 62.5px 0 62.5px;
+    border-color: rgba(0, 0, 0, 0.1) transparent transparent transparent;
+    top: 70%;
+    left: 20%;
+    transform: rotate(-30deg);
+}
+
+.workinghny-form-grid {
+    position: relative;
+    z-index: 0; /* Ensure form content is above the triangles */
+}
+
+/* Existing styles */
+.w3l_form, .content-wthree {
+    background: rgba(255, 245, 236, 0.95);
+    border-radius: 8px;
+    box-shadow: 2px 9px 49px -17px rgba(0, 0, 0, 0.1);
+}
+
+.w3l_form {
+    padding: 0px;
+    flex-basis: 50%;
+    -webkit-flex-basis: 50%;
+    background: #fff5ed;
+    box-shadow: 2px 9px 49px -17px rgba(0, 0, 0, 0.1);
+    padding: 100px 50px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-wthree {
+    flex-basis: 60%;
+    -webkit-flex-basis: 60%;
+    box-sizing: border-box;
+    padding: 3em 3.5em;
+    background: #fff5ed;
+    box-shadow: 2px 9px 49px -17px rgba(0, 0, 0, 0.1);
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.w3l-workinghny-form .logo {
+    text-align: center;
+}
+
+.w3l-mockup-form .main-mockup{
+    position: relative;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    margin: 40px 0;
+}
+
+/* Example glassmorphism effect */
+/* .main-mockup {
+    position: relative;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    margin: 40px 0;
+
+    background: rgba(25, 238, 53, 0.2); 
+    backdrop-filter: blur(5px); 
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1)
+} */
+
+.w3l-mockup-form .alert-close {
+    cursor: pointer;
+    height: 35px;
+    width: 35px;
+    line-height: 35px;
+    position: absolute;
+    right: -5px;
+    top: -5px;
+    background: #d59647;
+    border-radius: 50px;
+    color: red;
+    text-align: center;
+}
+
+.w3l-mockup-form form {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.social-icons {
+    text-align: center;
+}
+
+.w3l-mockup-form h1 {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    color: #3b3663;
+}
+
+.w3l-mockup-form h2 {
+    display: inline-block;
+    font-size: 25px;
+    line-height: 35px;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #3b3663;
+}
+
+.w3l-mockup-form input {
+    outline: none;
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: #999;
+    text-align: left;
+    padding: 14px 20px;
+    width: 100%;
+    display: inline-block;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    background: transparent;
+    border: 1px solid #e5e5e5;
+    transition: 0.3s all ease;
+}
+
+.w3l-mockup-form input:focus {
+    border-color: #d59647;
+}
+
+.w3l-mockup-form button {
+    font-size: 18px;
+    color: #fff;
+    width: 100%;
+    background: linear-gradient(135deg, #d59647, #f9bb74); /* Gradient from #d59647 to #f9bb74 */
+    border: none;
+    padding: 14px 15px;
+    font-weight: 500;
+    transition: .3s ease;
+    -webkit-transition: .3s ease;
+    -moz-transition: .3s ease;
+    -ms-transition: .3s ease;
+    -o-transition: .3s ease;
+}
+
+.w3l-mockup-form button:hover {
+    background: linear-gradient(135deg, #9e5b3c, #eca181); /* Gradient from #9e5b3c to #c47a5b */
+}
+
+.w3l-mockup-form .social-icons ul li {
+    list-style: none;
+    display: inline-block;
+}
+
+.w3l-mockup-form .social-icons ul li a {
+    padding: 8px;
+}
+
+.w3l-mockup-form .social-icons ul li a:hover {
+    opacity: 0.8;
+    transition: 0.5s ease;
+    -webkit-transition: 0.5s ease;
+    -o-transition: 0.5s ease;
+    -ms-transition: 0.5s ease;
+    -moz-transition: 0.5s ease;
+}
+
+.w3l-mockup-form .social-icons ul span.fa {
+    color: #696687;
+    font-size: 18px;
+    opacity: .8;
+}
+
+.w3l-mockup-form .social-icons ul li a.facebook span {
+    color: #3b5998;
+}
+
+.w3l-mockup-form .social-icons ul li a.twitter span {
+    color: #1da1f2;
+}
+
+.w3l-mockup-form .social-icons ul li a.pinterest span {
+    color: #e60023;
+}
+
+
+.copyright p {
+    text-align: center;
+    font-size: 17px;
+    line-height: 26px;
+    color: #607863;
+    opacity: 1;
+}
+
+p.copy-footer-29 a {
+    color: #517856;
+}
+
+p.copy-footer-29 a:hover {
+    color: #479a50;
+    transition: 0.5s ease;
+    -webkit-transition: 0.5s ease;
+    -o-transition: 0.5s ease;
+    -ms-transition: 0.5s ease;
+    -moz-transition: 0.5s ease;
+}
+
+.alert {    
+    padding: 1rem;
+    border-radius: 5px;
+    color: white;
+    margin: 1rem 0;
+}
+
+.alert-success {
+    background-color: #66b86f;
+}
+
+.alert-danger {
+    background-color: #fc5555;
+}
+
+.alert-info {
+    background-color: #2E9AFE;
+}
+
+.alert-warning {
+    background-color: #ff9966;
+}
+
+/*-- responsive design --*/
+
+@media (max-width:736px) {
+    .w3l-mockup-form .main-mockup {
+        flex-direction: column;
+    }
+
+    .w3l_form {
+        order: 2;
+        padding: 50px;
+        border-radius: 0;
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
+    }
+
+    .content-wthree {
+        order: 1;
+        border-radius: 0;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+    }
+}
+
+@media (max-width:568px) {
+    .w3l-mockup-form h1 {
+        font-size: 30px;
+    }
+
+    .w3l-mockup-form .main-mockup {
+        margin: 30px 0;
+    }
+
+    .content-wthree {
+        padding: 2.5em;
+    }
+}
+
+@media (max-width: 415px) {
+    .w3l-mockup-form {
+        padding: 40px 30px;
+    }
+
+}
+
+@media (max-width:384px) {
+    .w3l-mockup-form {
+        padding: 30px 15px;
+    }
+
+    .content-wthree {
+        padding: 2em;
+    }
+
+    .w3l-mockup-form h1 {
+        font-size: 28px;
+    }
+
+    .w3l-mockup-form h2 {
+        font-size: 22px;
+        line-height: 32px;
+    }
+
+    .copyright p {
+        font-size: 16px;
+    }
+}
+
+/*-- //responsive design --*/
+/*-- //form styling --*/

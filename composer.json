@@ -1,0 +1,14 @@
+{
+    "name": "lenovo/uit",
+    "description": "A web-based system for managing and ordering food in a university canteen.",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Hnin Shwe Yi Wint"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "phpmailer/phpmailer": "*"
+    }
+}

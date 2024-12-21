@@ -1,0 +1,35 @@
+
+.card {
+    align-items: center;
+}
+
+.card-header {
+    /* background-image: url('/UIT/photos/banner3.jpg');
+    background-size: cover;   
+    background-repeat: no-repeat; */
+    background: linear-gradient(45deg, #ff6257, #febf76, #ff6257);
+    width: 900px;
+    height: 60px;
+    top: 50px;
+    text-align: center;
+    border-radius: 50px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    /* background-color: #ff6f61; */
+}
+
+.card-header h2{
+    color: #333;
+    font-weight: 700;
+}
+
+.oo {
+    background-color: #fff;
+}
+
+footer{
+    height: 45px;
+}
+footer p{
+    margin-top: 35px;
+    color: #fd9a93;
+}

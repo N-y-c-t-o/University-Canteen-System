@@ -1,0 +1,889 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    overflow-x:hidden;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.d-grid {
+    display: grid;
+}
+
+.d-flex {
+    display: flex;
+    display: -webkit-flex;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+button,
+input,
+select {
+    -webkit-appearance: none;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+button,
+.btn,
+select {
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto; /* Maintain aspect ratio */
+}
+
+.left_grid_info {
+    position: relative; /* Create a positioning context for the child elements */
+    width: 100%; /* Adjust based on your design */
+    height: 60%; /* Adjust based on the content */
+}
+
+.left_grid_info .background {
+    position: absolute; /* Background image */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index: 1; /* Background image is behind */
+}
+
+.left_grid_info .foreground {
+    position: absolute; /* Foreground image with bounce effect */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index: 2; /* Foreground image is on top */
+    animation: floatUpDown 2s ease-in-out infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-40px); /* Bounce up */
+    }
+    60% {
+        transform: translateY(-15px); /* Bounce down */
+    }
+}
+
+@keyframes floatUpDown {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-200px); /* Increased vertical movement */
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+.left_grid_info2 {
+    position: relative; /* Create a positioning context for the child elements */
+    width: 100%; /* Adjust based on your design */
+    height: 100%; /* Adjust based on the content */
+}
+
+.left_grid_info2 .glass {
+    position: absolute; /* Background image */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index: 2; 
+}
+
+.left_grid_info2 .pepsi {
+    position: absolute; /* Foreground image with bounce effect */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index: 1; 
+    animation: creativeRotate 5s infinite; /* Apply rotate effect */
+}
+
+@keyframes creativeRotate {
+    0% {
+        transform: rotate(0deg) scale(1) translateY(0);
+        opacity: 1;
+    }
+    25% {
+        transform: rotate(90deg) scale(1.1) translateY(-5px);
+        opacity: 0.9;
+    }
+    50% {
+        transform: rotate(180deg) scale(1) translateY(0);
+        opacity: 1;
+    }
+    75% {
+        transform: rotate(270deg) scale(1.1) translateY(5px);
+        opacity: 0.9;
+    }
+    100% {
+        transform: rotate(360deg) scale(1) translateY(0);
+        opacity: 1;
+    }
+}
+
+/* @keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+} */
+
+.left_grid_info3 {
+    position: relative; /* Ensure child elements are positioned relative to this container */
+    width: 100%; /* Adjust based on your design */
+    height: 100%; /* Adjust based on the content */
+}
+
+.left_grid_info3 .ramen {
+    position: absolute; /* Ensure the ramen image is positioned inside the parent container */
+    left: 0;
+    width: 100%; /* Make the image fill its container */
+    height: auto; /* Maintain aspect ratio */
+    animation: creativeSlideIn 5s ease-in-out ; /* Apply the creative slide-in effect */
+}
+
+@keyframes creativeSlideIn {
+    0% {
+        transform: translateX(-30%) scale(0.5); /* Start off-screen with a smaller size */
+        opacity: 0; /* Start fully transparent */
+    }
+    40% {
+        transform: translateX(10%) scale(1.1); /* Overshoot slightly for a bounce effect */
+        opacity: 1; /* Fade in */
+    }
+    70% {
+        transform: translateX(0) scale(1); /* Settle in the final position */
+        opacity: 1; /* Fully visible */
+    }
+    100% {
+        transform: translateX(0) scale(1); /* Maintain final position */
+        opacity: 1; /* Fully visible */
+    }
+}
+
+.left_grid_info4 {
+    position: relative; /* Ensure child elements are positioned relative to this container */
+    width: 100%; /* Adjust based on your design */
+    height: 100%; /* Adjust based on the content */
+}
+
+.left_grid_info4 .mhk {
+    position: absolute; /* Ensure the ramen image is positioned inside the parent container */
+    left: 0;
+    width: 100%; /* Make the image fill its container */
+    height: auto; /* Maintain aspect ratio */
+    animation: rotateSlideIn 5s ease-in-out ; /* Apply the creative slide-in effect */
+}
+
+@keyframes rotateSlideIn {
+    0% {
+        transform: translateX(-30%) rotate(-30deg); /* Start off-screen to the left and rotated */
+        opacity: 0; /* Fully transparent */
+    }
+    40% {
+        transform: translateX(10%) rotate(15deg); /* Slide in slightly and rotate */
+        opacity: 1; /* Fade in */
+    }
+    100% {
+        transform: translateX(0) rotate(0); /* Settle into final position with no rotation */
+        opacity: 1; /* Fully visible */
+    }
+}
+
+/* .left_grid_info2 {
+    position: relative;
+    width: 100%;
+    height: 100%; 
+    margin: auto; /* Center the container if needed
+}
+
+.left_grid_info2 .glass {
+
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%; /* Adjust as needed
+    z-index: 1; /* Behind the Pepsi image
+}
+
+.left_grid_info2 .pepsi {
+    max-width: 50% !important; 
+    height: auto !important;
+    position: absolute;
+    top: 0;
+    left: 20%; 
+    transform: translateX(-50%);
+    width: 50%;
+    z-index: 2; /* On top of the Glass image
+    animation: rotate 3s infinite;
+}*/
+
+/* .left_grid_info img {
+    max-width: 100%;
+    display: block; /* Ensures that images do not have extra space around them 
+} */
+
+ul {
+    margin: 0;
+    padding: 0
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+    padding: 0
+}
+
+p {
+    color: #333;
+    font-size: 16px;
+    line-height: 25px;
+    opacity: .6;
+}
+
+.p-relative {
+    position: relative;
+}
+
+.p-absolute {
+    position: absolute;
+}
+
+.p-fixed {
+    position: fixed;
+}
+
+.p-sticky {
+    position: sticky;
+}
+
+.btn,
+button,
+.actionbg,
+input {
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -o-border-radius: 4px;
+    -ms-border-radius: 4px;
+}
+
+.btn:hover,
+button:hover {
+    transition: 0.5s ease;
+    -webkit-transition: 0.5s ease;
+    -o-transition: 0.5s ease;
+    -ms-transition: 0.5s ease;
+    -moz-transition: 0.5s ease;
+}
+
+/*-- wrapper start --*/
+.wrapper {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (min-width: 576px) {
+    .wrapper {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 768px) {
+    .wrapper {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 992px) {
+    .wrapper {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .wrapper {
+        max-width: 1140px;
+    }
+}
+
+.wrapper-full {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/*-- //wrapper start --*/
+
+/*-- form styling --*/
+.w3l-mockup-form {
+    position: relative;
+    min-height: 100vh;
+    z-index: 0;
+    background: #333;
+    /* background: #feefe0; */
+    /* background: rgba(24, 205, 45, 0.1); */
+    padding: 40px 40px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #fcf2e8;
+    box-shadow: 2px -3px 35px -10px rgba(10, 10, 10, 0.1);
+    border-radius: 20px;
+}
+
+/* .triangle-container {
+    position: absolute;
+    width: 20%;
+    height: 80%;
+    z-index: 1;
+}
+
+.triangle {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+}
+
+.triangle-1 {
+    border-width: 100px 50px 0 50px;
+    border-color: rgba(0, 0, 0, 0.1) transparent transparent transparent;
+    top: 10%;
+    left: 20%;
+    transform: rotate(45deg);
+}
+
+.triangle-2 {
+    border-width: 75px 37.5px 0 37.5px;
+    border-color: rgba(0, 0, 0, 0.1) transparent transparent transparent;
+    top: 35%;
+    left: 7%;
+    transform: rotate(10deg);
+}
+
+.triangle-3 {
+    border-width: 125px 62.5px 0 62.5px;
+    border-color: rgba(0, 0, 0, 0.1) transparent transparent transparent;
+    top: 70%;
+    left: 20%;
+    transform: rotate(-30deg);
+} */
+
+.workinghny-form-grid {
+    position: relative;
+    z-index: 0; /* Ensure form content is above the triangles */
+    border-radius: 20px;
+}
+
+/* Existing styles */
+
+.w3l_form {
+    padding: 0px;
+    flex-basis: 50%;
+    -webkit-flex-basis: 50%;
+    /* background: #fff5ed; */
+    box-shadow: 2px -3px 35px -10px rgba(10, 10, 10, 0.1);
+    padding: 100px 50px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-info {
+    position: relative; 
+    width: 100%; 
+    height: 100%; 
+}
+
+.info-content {
+    position: relative; 
+    width: 100%; 
+    height: 125%; 
+    font-size: 20px;
+}
+
+.info-content p {
+    font-size: 15px;
+    margin-bottom: 1em; /* Space between paragraph and form */
+    
+}
+
+.sec h2 {
+    position: relative;
+    font-weight: 1px;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.sec p {
+    line-height: 1.2;
+}
+
+.contact h2 {
+    font-size: 20px;
+}
+
+.contact .info{
+    position: relative;
+}
+
+.contact .info li{
+    display: grid;
+    grid-template-columns: 30px 1fr;
+    margin-bottom: 16px;
+}
+
+.info li span{
+    color: #333;
+    font-size: 20px;
+}
+
+.contact .info li a{
+    color: #333;
+    text-decoration: none;
+}
+
+.sci {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(4,50px);
+}
+
+.sci li {
+    list-style: none;
+}
+
+.sci li a{
+    color: #333;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    display: grid;
+    border: 2px solid #333;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgb(0,0,0, .1);
+    transition: .5s;
+    align-content: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.sci li a:hover {
+    color: rgb(230, 230, 230);
+    background: #454545;
+    text-decoration: none;
+}
+
+.sci a:hover {
+        color: rgb(230, 230, 230);
+        background: #333;
+        text-decoration: none;}
+    
+    /* Specific hover colors for each social media icon */
+.sci li:nth-child(1) a:hover {
+        background-color: #1877F2; /* Facebook Blue */
+        border-color: #1877F2;
+    }
+    
+    /* Instagram specific hover with gradient */
+.sci li:nth-child(2) a:hover {
+        background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+        border-color: #cc2366;
+        color: white; /* Icon color change to stand out against the gradient */
+    }
+    
+/* TikTok hover effect */
+.sci li:nth-child(3) a:hover {
+    background-color: #000000; /* TikTok's color */
+    border-color: #000000;
+}
+
+/* Viber hover effect */
+.sci li:nth-child(4) a:hover {
+    background-color: #6d00f1; /* Viber's color */
+    border-color: #6d00f1;
+}
+
+.sci li a i{
+    font-size: 20px;
+}
+
+.content-wthree {
+    font-size: 20px;
+    flex-basis: 60%;
+    -webkit-flex-basis: 60%;
+    box-sizing: border-box;
+    padding: 3em 3.5em;
+    box-shadow: 2px -3px 35px -10px rgba(10, 10, 10, 0.1);
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.content-wthree p {
+    font-size: 15px;
+}
+
+.w3l-workinghny-form .logo {
+    text-align: center;
+}
+
+.w3l-mockup-form .main-mockup{
+    position: relative;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    margin: 40px 0;
+}
+
+.w3l-mockup-form .alert-close {
+    cursor: pointer;
+    height: 35px;
+    width: 35px;
+    line-height: 35px;
+    position: absolute;
+    right: -5px;
+    top: -5px;
+    background: #d59647;
+    border-radius: 50px;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+}
+
+.w3l-mockup-form form {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.social-icons {
+    text-align: center;
+}
+
+.w3l-mockup-form h1 {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    color: #3b3663;
+}
+
+.w3l-mockup-form h2 {
+    display: inline-block;
+    font-size: 25px;
+    line-height: 35px;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #3b3663;
+}
+
+.w3l-mockup-form input {
+    outline: none;
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: #999;
+    text-align: left;
+    padding: 14px 20px;
+    width: 100%;
+    display: inline-block;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    background: transparent;
+    border: 1px solid #f8cb93;
+    transition: 0.3s all ease;
+}
+
+.w3l-mockup-form input:focus {
+    border-color: #d59647;
+}
+
+.w3l-mockup-form button {
+    font-size: 18px;
+    color: #fff;
+    width: 100%;
+    background: linear-gradient(135deg, #eca54e, #f9bb74); /* Gradient from #d59647 to #f9bb74 */
+    border: none;
+    padding: 14px 15px;
+    font-weight: 500;
+    transition: .3s ease;
+    -webkit-transition: .3s ease;
+    -moz-transition: .3s ease;
+    -ms-transition: .3s ease;
+    -o-transition: .3s ease;
+}
+
+.w3l-mockup-form button:hover {
+    background: linear-gradient(135deg, #f5a623, #fee27b);
+}
+
+.w3l-mockup-form .social-icons ul li {
+    list-style: none;
+    display: inline-block;
+}
+
+.w3l-mockup-form .social-icons ul li a {
+    padding: 8px;
+}
+
+.w3l-mockup-form .social-icons ul li a:hover {
+    opacity: 0.8;
+    transition: 0.5s ease;
+    -webkit-transition: 0.5s ease;
+    -o-transition: 0.5s ease;
+    -ms-transition: 0.5s ease;
+    -moz-transition: 0.5s ease;
+}
+
+.w3l-mockup-form .social-icons ul span.fa {
+    color: #696687;
+    font-size: 18px;
+    opacity: .8;
+}
+
+.w3l-mockup-form .social-icons ul li a.facebook span {
+    color: #3b5998;
+}
+
+.w3l-mockup-form .social-icons ul li a.twitter span {
+    color: #1da1f2;
+}
+
+.w3l-mockup-form .social-icons ul li a.pinterest span {
+    color: #e60023;
+}
+
+.input:focus{
+    outline: 5px solid red;
+}
+
+/* Smooth background image animation */
+/* .background {
+    animation: slideIn 2s ease-in-out infinite alternate;
+} */
+
+.foreground {
+    animation: floatUpDown 3s ease-in-out infinite;
+}
+
+/* Button hover effect */
+.btn {
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+    background-color: #FF5733; /* Example of hover color change */
+}
+
+/* Smooth fade-in for the form */
+.main-mockup {
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeInUp 1s forwards;
+}
+
+/* Keyframes for animations */
+@keyframes slideIn {
+    from {
+        transform: translateX(-20px);
+    }
+    to {
+        transform: translateX(20px);
+    }
+}
+
+@keyframes floatUpDown {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+
+
+
+.copyright p {
+    text-align: center;
+    font-size: 17px;
+    line-height: 26px;
+    color: #607863;
+    opacity: 1;
+}
+
+p.copy-footer-29 a {
+    color: #517856;
+}
+
+p.copy-footer-29 a:hover {
+    color: #479a50;
+    transition: 0.5s ease;
+    -webkit-transition: 0.5s ease;
+    -o-transition: 0.5s ease;
+    -ms-transition: 0.5s ease;
+    -moz-transition: 0.5s ease;
+}
+
+.alert {    
+    padding: 1rem;
+    border-radius: 5px;
+    color: white;
+    margin: 1rem 0;
+}
+
+.alert-success {
+    background-color: #66b86f;
+}
+
+.alert-danger {
+    background-color: #fc5555;
+}
+
+.alert-info {
+    background-color: #2E9AFE;
+}
+
+.alert-warning {
+    background-color: #ff9966;
+}
+
+/*-- responsive design --*/
+
+@media (max-width:736px) {
+    .w3l-mockup-form .main-mockup {
+        flex-direction: column;
+    }
+
+    .w3l_form {
+        order: 2;
+        padding: 50px;
+        border-radius: 0;
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
+    }
+
+    .content-wthree {
+        order: 1;
+        border-radius: 0;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+    }
+}
+
+@media (max-width:568px) {
+    .w3l-mockup-form h1 {
+        font-size: 30px;
+    }
+
+    .w3l-mockup-form .main-mockup {
+        margin: 30px 0;
+    }
+
+    .content-wthree {
+        padding: 2.5em;
+    }
+}
+
+@media (max-width: 415px) {
+    .w3l-mockup-form {
+        padding: 40px 30px;
+    }
+
+}
+
+@media (max-width:384px) {
+    .w3l-mockup-form {
+        padding: 30px 15px;
+    }
+
+    .content-wthree {
+        padding: 2em;
+    }
+
+    .w3l-mockup-form h1 {
+        font-size: 28px;
+    }
+
+    .w3l-mockup-form h2 {
+        font-size: 22px;
+        line-height: 32px;
+    }
+
+    .copyright p {
+        font-size: 16px;
+    }
+}
+
+/*-- //responsive design --*/
+/*-- //form styling --*/

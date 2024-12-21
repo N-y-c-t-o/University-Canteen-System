@@ -1,0 +1,244 @@
+:root{
+    --primary-color: #feefe0;
+    --hover-color: #333;
+    --panel-color: #feefe0;
+    --text-color: #454545;
+    --black-light-color: #707070;
+    --border-color: #fce1c5;
+    --toggle-color: #333;
+    --box1-color: #adafaf;
+    --box2-color: #ffe6ac;
+    --box3-color: #e7d1fc;
+    --title-icon-color: #fff;
+    --highlight-color: #fee3c5;
+    --dark-light-color: #333;
+
+}
+
+.body.dark{
+    --primary-color: #212222;
+    --hover-color:white;
+    --panel-color: #212222;
+    --text-color: #d3d3d3;
+    --black-light-color: #ccc;
+    --border-color: #4d4c4c;
+    --toggle-color: #fff;
+    --box1-color: #3a3b3c;
+    --box2-color: #3a3b3c;
+    --box3-color: #3a3b3c;
+    --highlight-color: #333;
+    --dark-light-color: #fff;
+
+}
+
+
+.card {
+    padding-top: 100px;
+    margin-left: -14px;
+    margin-bottom: 0px;
+    margin-right: -30px;
+    background-color: var(--panel-color);
+    transition: var(--tran-05);
+}
+
+.card p{
+    text-align:center;
+}
+
+.home {
+    text-align: center;
+    padding: 50px 100px;
+    background-color: transparent;
+    animation: fadeIn 2s ease-in-out;
+    color: var(--hover-color);
+}
+
+/* .upgrade {
+    transition: var(--tran-05);
+    font-size: large;
+    text-align: center;
+    color: var(--hover-color);
+}
+
+.upgrade .btn {
+    border: none;
+} */
+.font{
+    color: var(--dark-light-color);
+}
+
+
+.upgrade {
+    transition: var(--tran-05);
+    font-size: large;
+    text-align: center;
+    color: var(--hover-color);
+    margin: 20px auto;
+    padding: 20px;
+    
+}
+
+.upgrade .btn {
+    background-color: #ff6f61;
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 50px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.upgrade .btn:hover {
+    background-color: #ff4e42;
+    transform: scale(1.05);
+}
+
+.upgrade h2 {
+    margin: 0;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #fff;
+}
+
+.greeting h2 {
+    font-size: 1.5em; /* Slightly smaller font size for a more balanced layout */
+    font-weight: bold;
+    color: var(--hover-color); /* Slightly darker text color for better readability */
+    margin: 0;
+    transition: all 0.3s ease-in-out;
+    text-align: left;
+}
+
+.search-bar .form-control {
+    padding: 8px 18px; /* Adjusted padding for better alignment with the overall design */
+    border-radius: 20px;
+    border: 2px solid #ff6f61;
+    font-size: 1em;
+    width: 280px; /* Slightly narrower input field */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.search-bar .form-control:focus {
+    border-color: #ff4e42;
+    box-shadow: 0 0 8px rgba(255, 111, 97, 0.5); /* Slightly subtler shadow on focus */
+    outline: none;
+}
+
+.search-bar input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.promotions {
+    margin-top: 20px;
+    margin-right: 200px;
+    margin-left: 200px;
+}
+
+.promotion-card {
+    background-color: #fff;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.notice-alert {
+    color: #212222; 
+    text-align: center; 
+    font-size: 16px;
+}
+
+
+.promo-text h2 {
+    font-size: 25px;
+    font-weight: bold;
+    color: #ff6f61;
+    text-align: left;
+}
+
+.promo-text p {
+    font-size: 16px;
+    color: #555;
+    text-align: justify;
+    padding-right: 50px;
+}
+
+.promo-image img {
+    width: 150px;
+}
+
+.recommended {
+    margin-top: 20px;
+}
+
+.recommended h2 {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.recommended-items {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.item-card {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex-basis: 30%;
+    transition: transform 0.3s ease;
+}
+
+.item-card:hover {
+    transform: scale(1.05);
+}
+
+.item-card img{
+    width: 100px;
+
+}
+
+.item-card h3 {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #ff6f61;
+}
+
+.item-card p {
+    color: #333;
+    font-weight: bold;
+}
+
+.order-summary {
+    margin-top: 20px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.order-summary h2 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+}
+
+.order-details p {
+    margin: 5px 0;
+    color: #555;
+}
+
+.order-summary .btn {
+    background-color: #ff6f61;
+    border: none;
+    margin-top: 10px;
+}

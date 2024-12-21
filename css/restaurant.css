@@ -1,0 +1,441 @@
+/* General Styles */
+:root{
+    --primary-color: #feefe0;
+    --hover-color: #333;
+    --panel-color: #feefe0;
+    --text-color: #454545;
+    --black-light-color: #707070;
+    --border-color: #fce1c5;
+    --toggle-color: #333;
+    --box1-color: #adafaf;
+    --box2-color: #ffe6ac;
+    --box3-color: #e7d1fc;
+    --title-icon-color: #fff;
+    --highlight-color: #fee3c5;
+    --dark-light-color: #333;
+    --msym-color: #fbbc5e;
+    --msym-button-color:#ffcd69;
+    --msym-hover-color: #fec554;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between; /* Distributes space between the items */
+    align-items: center; /* Aligns items vertically */
+    /* Adds some padding for spacing */
+   /* Optional: background color for better visibility */
+}
+
+/* Style the h1 tag */
+.header-container h1 {
+    margin: 0; /* Remove default margin */
+    font-size: 24px; /* Adjust font size as needed */
+}
+
+/* Styles for filter and search bar */
+.filter-bar {
+    display: flex;
+    align-items: right;
+    justify-content: space-between;
+    padding: 10px;
+ 
+    margin-bottom: 20px;
+}
+.search-bar:focus {
+    box-shadow: 0 0 10px rgba(255, 105, 180, 0.8);
+    outline: none;
+}
+.search-bar {
+    flex-grow: 1;
+    padding: 8px 15px;
+    border: 1px solid #ccc;
+   
+    margin-right: 10px;
+    width: 60%;
+    padding: 10px;
+    border-radius: 25px;
+    
+    font-size: 16px;
+    transition: box-shadow 0.3s ease;
+}
+
+.filter-button {
+    background-color: #000;
+    color: #fff;
+    border: none;
+   
+    border-radius: 30px;
+   
+    margin-left: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    background-color: var(--msym-button-color);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+/* Popup Modal Styling */
+.popup {
+    display: none; 
+    position: fixed; 
+    z-index: 1000; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.3s ease;
+}
+
+.popup-content {
+    background-color: #ffe4e1;
+    border: 3px solid #ff69b4;
+    border-radius: 15px;
+    width: 300px;
+    padding: 20px;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+.popup-content p {
+    color: #ff69b4;
+    font-size: 18px;
+    margin: 0;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #ff69b4;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: #ff1493;
+}
+
+.filter-button:hover{
+    background-color:var(--msym-hover-color) ;
+}
+/* Restaurant card styles */
+/* .restaurants {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+    padding: 20px;
+} */
+.restaurant-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+.restaurant-img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.restaurant-card:hover .restaurant-img {
+    transform: scale(1.1);
+    filter: brightness(50%);
+}
+.restaurant-card {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 15px;
+    max-height: 250px;
+    position: relative;
+    overflow: hidden;
+}
+
+
+
+.restaurant-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+.restaurant-card h2 {
+    font-size: 1.5rem;
+    margin: 15px 0;
+    color: #ff4d88;
+}
+
+.order-btn {
+    background-color: #ff99bb;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.order-btn:hover {
+    background-color: #ff4d88;
+}
+
+
+.restaurant-info {
+    padding: 10px 15px;
+    flex-grow: 1;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+   
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.restaurant-card:hover .restaurant-info {
+    opacity: 1;
+}
+.restaurant-info h2 {
+    font-size: 18px;
+    margin: 0;
+}
+
+.restaurant-info p {
+    font-size: 14px;
+    color: #888;
+}
+.restaurant-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+
+.rating {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.rating-score {
+    background-color: #4caf50;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 50%;
+    font-weight: bold;
+}
+
+/* Responsive styling for mobile */
+/* @media (max-width: 768px) {
+    .restaurants {
+        grid-template-columns: 1fr;
+    }
+
+    .restaurant-card {
+        flex-direction: row;
+    }
+} */
+
+.body.dark{
+    --primary-color: #212222;
+    --hover-color:white;
+    --panel-color: #212222;
+    --text-color: #d3d3d3;
+    --black-light-color: #ccc;
+    --border-color: #4d4c4c;
+    --toggle-color: #fff;
+    --box1-color: #3a3b3c;
+    --box2-color: #3a3b3c;
+    --box3-color: #3a3b3c;
+    --highlight-color: #333;
+    --dark-light-color: #fff;
+
+}
+.h1{
+    text-align: center;
+    padding: 20px;
+    background-color: #ffccdf;
+}
+h1 {
+    font-size: 2.5rem;
+    color:var(--msym-color);
+  
+    text-align: center;
+    padding-top: 10px;
+}
+.food-icons img {
+    width: 50px;
+    margin: 0 10px;
+}
+/* Page Wrapper */
+.page-wrapper {
+    overflow-x: hidden;
+    padding-top: 100px;
+    margin-left: -14px;
+    margin-bottom: 0px;
+    margin-right: -30px;
+    background-color: var(--panel-color);
+    transition: var(--tran-05);
+}
+.popup.no-animation {
+    transition: none !important; /* Disables all transitions */
+    opacity: 1; /* Make sure it's fully visible */
+    display: flex; /* Ensures it is shown */
+}
+.restaurants-page{
+    text-align: center;
+    padding: 30px 100px;
+    background-color: transparent;
+    animation: fadeIn 2s ease-in-out;
+    color: var(--hover-color);
+}
+
+/* Inner Page Hero */
+.inner-page-hero {
+    color: #fff;
+    padding: 100px 0;
+    position: relative;
+}
+
+.hero-content{
+    background-image: url("../photos/banner.jpg");
+    height: 300px;
+    width: 1270px;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 3em;
+    margin: 50px;
+}
+
+.hero-content p {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping if necessary */
+    gap: 50px; /* Adds space between items */
+}
+
+/* Basic styles for restaurant entry */
+/* .restaurant-entry {
+    margin-right: 0px;
+    gap: 50px;
+    display: flex;
+    width: 100%;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: white;
+    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+    align-items: center; 
+} */
+
+.restaurant-entry {
+    display: flex;
+    align-items: center; /* Vertically centers the items */
+    justify-content: space-between; /* Ensures even spacing between items */
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #fff;
+    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+/* Hover effect for the restaurant entry */
+.restaurant-entry:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transform: scale(1.02);
+}
+
+/* Entry logo styles */
+.entry-logo img {
+    width: 50%; /* Ensures image takes up full space in its container */
+    height: auto;
+    max-width: 100px; /* Limit the size of the image */
+    margin-left: 10px; /* Adds space between image and text */
+    transition: transform 0.3s ease-in-out;
+}
+
+.entry-dscr {
+    flex-grow: 1; /* Makes sure the title takes up available space */
+    margin-right: 20px;
+}
+
+/* Entry description styles */
+.entry-dscr h5 {
+    margin-top: 10px;
+    font-size: 1.5rem;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Hover effect for the title link */
+.entry-dscr h5 a {
+    text-align: center;
+    text-decoration: none;
+    color: #333;
+}
+
+.entry-dscr h5 a:hover {
+    color: #ff5733;
+}
+
+/* Right content styles */
+.right-content {
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+/* Button styles with hover effect */
+.btn-purple {
+    text-decoration: none;
+    background-color: #ff5733;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.btn-purple:hover {
+    background-color: #dc401d;
+    transform: translateY(-3px);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2em;
+    }
+
+    .hero-content p {
+        font-size: 1em;
+    }
+}

@@ -1,0 +1,85 @@
+.card-header {
+    background: linear-gradient(45deg, #ff6257, #febf76, #ff6257);
+    width: 900px;
+    height: 60px;
+    top: 50px;
+    text-align: center;
+    border-radius: 50px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    /* background-color: #ff6f61; */
+}
+
+.card-header h2{
+    color: #333;
+    font-weight: 700;
+}
+
+.oo {
+    background-color: #fff;
+}
+
+footer{
+    height: 45px;
+}
+footer p{
+    margin-top: 35px;
+    color: #fd9a93;
+}
+
+/* .card {
+    align-items: center;
+} */
+
+.add {
+    /* background-image: url('/UIT/photos/banner3.jpg');
+    background-size: cover;   
+    background-repeat: no-repeat; */
+    /* background: linear-gradient(90deg, #fe5d63, #ff9da1, #fe5d63); */
+    /* background: linear-gradient(15deg, #fca3a6, #fe676c); */
+    background: linear-gradient(45deg, #ff6257, #febf76, #ff6257);
+    width: 900px;
+    height: 60px;
+    top: 50px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    /* background-color: #ff6f61; */
+}
+
+.add h2{
+    color: #333;
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+.form-actions{
+    display: inline-flex;
+}
+
+.form-actions a{
+    /* text-align:; */
+}
+
+.btn {
+    width: 100px;
+    background-color: #ff6257;
+    color: #ffffff;
+    border-radius: 10px;
+    border: 2.5px solid #ff4e42;
+    margin: 20px 10px 0px 10px;
+    display: flex;
+    flex-direction: row;
+    transition: background-color 0.3s, transform 0.2s;
+    text-align: center;
+}
+
+.btn:hover {
+    background-color: #ff4e42;
+    color: #333;
+    transform: scale(1.05);
+}
+
+footer p{
+    margin-top: 20px;
+    color: #fd9a93;
+}

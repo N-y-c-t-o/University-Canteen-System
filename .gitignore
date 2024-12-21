@@ -1,0 +1,26 @@
+# Logs and databases
+*.log
+*.sql
+*.sqlite
+
+# Composer dependencies
+/vendor/
+
+# Node dependencies (if applicable)
+/node_modules/
+
+# Environment files
+.env
+
+# IDE settings
+.idea/
+.vscode/
+
+# Cache and temp files
+*.cache
+*.temp
+/tmp/
+/cache/
+
+# PHPUnit result cache
+.phpunit.result.cache
